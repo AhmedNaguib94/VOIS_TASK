@@ -1,0 +1,17 @@
+.line-chart-container {
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+
+  .chart {
+    width: 80%;
+  }
+
+  .details {
+    width: 20%;
+  }
+}

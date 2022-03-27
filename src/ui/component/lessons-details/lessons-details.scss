@@ -1,0 +1,23 @@
+.lessons-details-container {
+  margin-inline-start: 20px;
+
+  .list {
+    max-height: 300px;
+    overflow: auto;
+    margin-top: 20px;
+
+    .element {
+      margin: 10px 0;
+
+      > span {
+        margin-inline-start: 10px;
+
+        span {
+          font-weight: bold;
+          font-size: 17px;
+          margin-inline-end: 5px;
+        }
+      }
+    }
+  }
+}
