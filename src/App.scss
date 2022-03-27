@@ -1,0 +1,8 @@
+@import "~antd/dist/antd.css";
+@import "./style/global";
+@import "./style/classes";
+
+.app-container {
+  min-height: 100vh;
+  box-sizing: border-box;
+}

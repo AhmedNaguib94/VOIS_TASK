@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import ChartPage from './ui/page/chart-page/chart-page';
+import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import ChartDetails from './ui/page/chart-details/chart-details';
+import Loading from './ui/shared-component/loading/loading';
+
 
 function App() {
+  const loadingState = useSelector((state: any) => state.loading);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      {loadingState && <Loading /> }
+      <Router>
+        <Routes>
+            <Route path="/chart" element={<ChartPage />} />
+            <Route path="/chart-details" element={<ChartDetails />} />
+            <Route path="*" element={<Navigate to="/chart" />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
