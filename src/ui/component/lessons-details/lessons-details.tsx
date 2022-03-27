@@ -24,7 +24,7 @@ const LessonsDetails: React.FC = (): ReactElement => {
     return (
         <div className="flex column lessons-details-container" role="container">
             <div>
-                {state.totalLessons !== 0 ? <h3>{state.totalLessons} Lessons</h3> : ''}
+                {state.totalLessons !== 0 ? <h3><span>{state.totalLessons}</span> Lessons</h3> : ''}
                 {state.selectedCamp && state.totalLessons !== 0 ? <p>in {state.selectedCamp}</p> : ''}
             </div>
             <div className="flex column list" role="list">

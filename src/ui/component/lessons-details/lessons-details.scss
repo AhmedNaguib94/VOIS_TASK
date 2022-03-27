@@ -1,6 +1,16 @@
 .lessons-details-container {
   margin-inline-start: 20px;
 
+  h3 {
+    color: #000;
+    margin-bottom: 0;
+
+    span {
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+
   .list {
     max-height: 300px;
     overflow: auto;
